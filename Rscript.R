@@ -3,7 +3,7 @@ library(jsonlite)
 
 fake_people <- function(num_results = 20, 
                         gender_wanted = 'female',
-                        nat = 'US' {
+                        nat = 'US') {
   # Function will still need some error checking
   # e.g. a country that's not valid should be removed
   url <- "http://api.randomuser.me/"
@@ -20,6 +20,7 @@ fake_people <- function(num_results = 20,
 fake_people(1)
 fake_people()
 
-fake_people(gender = "mal e")
+fake_people(gender = "male")
 
-fake_people(gender = "male", nat = "GB")
+nogies  <- fake_people(gender = "male", nat = "GB")
+View(nogies)
